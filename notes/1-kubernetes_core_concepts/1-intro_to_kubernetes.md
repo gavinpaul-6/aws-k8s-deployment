@@ -45,3 +45,17 @@
     - Is used for managing stateful applications. It provides guarantees about the ordering and uniqueness of Pods. Each Pod in a StatefulSet gets a stable, unique network identifier and persistent storage.
     - For Stateful apps (e.g. MySQL, Elastic, mongoDB, etc.)
     - DBs are often hosted outside of the K8s cluster
+
+- When we **add Nodes** we need to adjust the replica number
+- When we **delete Nodes** we need to **adjust replica number again**
+- With Deployment, we also **can't ensure that Pods are equally distributed**
+
+* **DaemonSets**
+
+    - Create **DaemonSets** for such use cases
+    - Calculates how many Replicas are needed based on existing Nodes
+    - Deploys just 1 Replica per Node
+    - When Nodes are added, Pods are added to them
+    - When Nodes are removed, those Pods are garbage collected
+    - No need to define replica count
+    - Automatically scales up & down
