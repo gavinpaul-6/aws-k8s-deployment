@@ -1,4 +1,4 @@
-##### Kubernetes Configuration File
+# Kubernetes Configuration File
 
 * The **3 parts** of configuration file
 * **Connecting** Deployment to Service to Pod
@@ -12,12 +12,12 @@
         - Desired? = Actual?
 
 
-#### Where does K8s get this status data?
+### Where does K8s get this status data?
 
 * Etcd holds the current status of any K8s component
 
 
-#### YAML Configuration Files
+### YAML Configuration Files
 
 - **""human friendly** data serialzation standard for all programming languages
 

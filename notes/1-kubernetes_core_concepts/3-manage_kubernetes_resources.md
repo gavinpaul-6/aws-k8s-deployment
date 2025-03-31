@@ -1,4 +1,4 @@
-###### Manage Kubernetes Resources - kubectl and config file
+# Manage Kubernetes Resources - kubectl and config file
 
 * How to **create** those components
 
@@ -34,15 +34,15 @@
                   image: nginx
   ```
 
-Imperative vs declarative
+## Imperative vs declarative
 
-* Imperative
+* **Imperative**
     - Telling K8s **WHAT to do** (e.g. create, delete, update...)
     - We operate directly on live objects
     - Practical when testing
     - Quick for one-off tasks or when just getting started
-
-* Declarative
+**
+* **Declarative**
     - Telling K8s **WHAT we want as an end result** in the config file
     - We operate on object configuration files
     - History of configurations
