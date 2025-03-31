@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/CKA_logo.png" width="300" height="auto">
+  <img src="images\cka.png" width="300" height="auto">
 </p>
 
 # Kubernetes Cluster Setup and CKA Exam Documentation  
@@ -184,7 +184,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 <img src="images\initialize_cluster_with_kubeadm.png" width="600" height="auto">
 
 
-### 6. Deploy Networking and Ingress  
+### 6. Deploy Networking  
 Install a network plugin (Cilium):  
 ```bash
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
@@ -213,8 +213,6 @@ Cilium requires certain ports to be open to enable connectivity which can be con
 
 
 
-
-
 ### 7. Join Worker Nodes  
 Copy the `kubeadm join` command from the master node and run it on worker nodes:  
 ```bash
@@ -224,6 +222,8 @@ sudo kubeadm join <master-node-ip>:6443 --token <token> --discovery-token-ca-cer
 <img src="images\join_worker_nodes_to_cluster-pt1.png" width="600" height="auto">
 
 <img src="images\join_worker_nodes_to_cluster-pt2.png" width="600" height="auto">
+
+
 
 
 ---
